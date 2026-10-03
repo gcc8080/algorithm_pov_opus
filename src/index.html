@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>算法之美 · The Beauty of Algorithms</title>
+<style>
+  :root { color-scheme: dark; --ink:#f4f1e8; --dim:#a39a86; --gold:#f6c770; --bg:#000; }
+  html,body { margin:0; height:100%; background:var(--bg); color:var(--ink); font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",system-ui,sans-serif; overflow:hidden; }
+  #stage { position:fixed; inset:0; display:flex; align-items:center; justify-content:center; background:#000; }
+  canvas#cv { width:min(100vw, calc(100vh * 16 / 9)); height:auto; aspect-ratio:16/9; display:block; background:#000; }
+  #start { position:fixed; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px; background:radial-gradient(ellipse at center, rgba(40,30,12,.55), rgba(0,0,0,.94)); z-index:5; transition:opacity .7s; padding:0 16px; text-align:center; }
+  #start h1 { margin:0; font-family:"Noto Serif SC",serif; font-weight:900; font-size:clamp(40px,8vw,104px); letter-spacing:.24em; padding-left:.24em; background:linear-gradient(90deg,#e9b864,#fff4da,#e9b864); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  #start p { margin:0; font-family:"LMRoman",Georgia,serif; letter-spacing:.32em; color:#d8cdb2; font-size:clamp(12px,1.7vw,18px); }
+  #start .play { margin-top:20px; width:86px; height:86px; border-radius:50%; border:1.5px solid var(--gold); display:grid; place-items:center; box-shadow:0 0 44px rgba(246,199,112,.35), inset 0 0 22px rgba(246,199,112,.18); cursor:pointer; background:none; color:inherit; padding:0; }
+  #start .play:disabled { opacity:.35; cursor:progress; }
+  #start .play:after { content:""; margin-left:8px; border-left:26px solid #fff; border-top:16px solid transparent; border-bottom:16px solid transparent; }
+  #start .play:focus-visible { outline:2px solid #fff; outline-offset:4px; }
+  #start small { color:#8a826f; letter-spacing:.18em; font-size:12px; min-height:1.2em; }
+  #bar { position:fixed; left:0; right:0; bottom:0; padding:14px 18px calc(16px + env(safe-area-inset-bottom, 0px)); display:flex; align-items:center; gap:14px; background:linear-gradient(transparent, rgba(0,0,0,.82)); opacity:0; transition:opacity .35s; z-index:4; font:500 13px/1 "LMMono",ui-monospace,Menlo,monospace; }
+  body.show #bar, #bar:hover, #bar:focus-within { opacity:1; }
+  button.c { background:none; border:1px solid rgba(246,199,112,.35); color:var(--ink); border-radius:8px; height:34px; min-width:40px; padding:0 10px; cursor:pointer; font:inherit; }
+  button.c:hover, button.c:focus-visible { border-color:var(--gold); color:#fff; outline:none; }
+  #seek { flex:1; position:relative; height:24px; cursor:pointer; min-width:0; }
+  #seek .track { position:absolute; left:0; right:0; top:11px; height:2px; background:rgba(246,199,112,.22); }
+  #seek .fill { position:absolute; left:0; top:11px; height:2px; background:var(--gold); box-shadow:0 0 10px var(--gold); }
+  #seek .tick { position:absolute; top:6px; width:1px; height:12px; background:rgba(255,255,255,.5); }
+  #seek .tick span { position:absolute; bottom:16px; left:50%; transform:translateX(-50%); white-space:nowrap; font-size:10px; color:#d8cdb2; opacity:0; transition:opacity .2s; }
+  #seek:hover .tick span { opacity:1; }
+  #time { color:var(--dim); min-width:100px; text-align:right; }
+  @media (max-width:640px){ #seek .tick span{display:none} #time{min-width:64px} }
+  @media (prefers-reduced-motion: reduce) { #start, #bar { transition:none; } }
+</style>
+</head>
+<body>
+<div id="stage"><canvas id="cv" width="1920" height="1080"></canvas></div>
+<div id="start">
+  <h1>算法之美</h1>
+  <p>THE BEAUTY OF ALGORITHMS</p>
+  <button class="play" id="go" aria-label="Play" disabled></button>
+  <small id="status">正在运行算法… running the algorithms</small>
+</div>
+<div id="bar">
+  <button class="c" id="pp" title="Play / Pause (Space)">❚❚</button>
+  <div id="seek"><div class="track"></div><div class="fill"></div></div>
+  <span id="time">00:00 / 05:00</span>
+  <button class="c" id="fs" title="Fullscreen (F)">⛶</button>
+</div>
+<script src="fonts.js"></script>
+<script src="data.js"></script>
+<script src="events.js"></script>
+<script src="spectrum.js"></script>
+<script src="script.js"></script>
+<script src="core.js"></script>
+<script src="scenes_a.js"></script>
+<script src="scenes_b.js"></script>
+<script src="scenes_c.js"></script>
+<script src="scenes_d.js"></script>
+<script>
+(function () {
+  const EXPORT = /[?&]export/.test(location.search);
+  const cv = document.getElementById("cv"), ctx = cv.getContext("2d");
+  AF.EXPORT = EXPORT;
+  const precompute = async (onp) => { const list = AF.precompute || []; for (let i = 0; i < list.length; i++) { await new Promise((r) => setTimeout(r, 0)); await list[i](); onp && onp((i + 1) / list.length); } };
+  if (EXPORT) {
+    document.getElementById("start").remove(); document.getElementById("bar").remove();
+    window.READY = Promise.all([window.FONTS_READY, document.fonts.ready]).then(() => precompute()).then(() => true);
+    window.prepare = (t) => (AF.prepare ? AF.prepare(t) : Promise.resolve());
+    window.renderAt = (t, q = 0.94) => { AF.render(ctx, t); return cv.toDataURL("image/jpeg", q); };
+    return;
+  }
+  const l = document.createElement("link"); l.rel = "stylesheet";
+  l.href = "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Serif+SC:wght@200;400;700;900&family=STIX+Two+Text:ital@0;1&display=swap";
+  document.head.appendChild(l);
+  const audio = new Audio(); audio.src = "score.mp3"; audio.preload = "auto";
+  let playing = false, clock0 = 0, clockT = 0, useClock = false;
+  audio.addEventListener("error", () => { useClock = true; });
+  const now = () => (useClock ? (playing ? clockT + (performance.now() - clock0) / 1000 : clockT) : audio.currentTime);
+  function play() {
+    playing = true; document.getElementById("pp").textContent = "❚❚";
+    if (useClock) { clock0 = performance.now(); return; }
+    audio.play().catch(() => { useClock = true; clockT = audio.currentTime || 0; clock0 = performance.now(); });
+  }
+  function pause() { if (useClock) clockT = now(); playing = false; audio.pause(); document.getElementById("pp").textContent = "▶"; }
+  function seek(t) { t = Math.max(0, Math.min(AF.DUR - 0.05, t)); if (useClock) { clockT = t; clock0 = performance.now(); } else audio.currentTime = t; }
+  const start = document.getElementById("start"), go = document.getElementById("go"), status = document.getElementById("status");
+  Promise.all([window.FONTS_READY, document.fonts.ready]).then(() => precompute((p) => (status.textContent = `正在运行算法 running the algorithms · ${Math.round(p * 100)}%`)))
+    .then(() => { go.disabled = false; status.textContent = "5 MIN · 中英双语 · 请开启声音 / SOUND ON"; go.focus(); });
+  go.addEventListener("click", () => { start.style.opacity = 0; setTimeout(() => start.remove(), 700); play(); });
+  document.getElementById("pp").onclick = () => (playing ? pause() : play());
+  document.getElementById("fs").onclick = () => { try { document.fullscreenElement ? document.exitFullscreen() : document.documentElement.requestFullscreen(); } catch (e) {} };
+  const seekEl = document.getElementById("seek"), fill = seekEl.querySelector(".fill");
+  for (const c of window.TL.chapters) {
+    const d = document.createElement("div"); d.className = "tick"; d.style.left = (c[0] / AF.DUR * 100) + "%";
+    d.innerHTML = `<span>${c[2]} ${c[4]}</span>`; seekEl.appendChild(d);
+  }
+  seekEl.addEventListener("click", (e) => { const r = seekEl.getBoundingClientRect(); seek((e.clientX - r.left) / r.width * AF.DUR); });
+  addEventListener("keydown", (e) => {
+    if (e.code === "Space") { e.preventDefault(); playing ? pause() : play(); }
+    if (e.key === "f" || e.key === "F") document.getElementById("fs").click();
+    if (e.key === "ArrowRight") seek(now() + 5); if (e.key === "ArrowLeft") seek(now() - 5);
+  });
+  let idle; addEventListener("pointermove", () => { document.body.classList.add("show"); clearTimeout(idle); idle = setTimeout(() => document.body.classList.remove("show"), 1800); });
+  const fmt = (s) => `${String(Math.floor(s / 60)).padStart(2, "0")}:${String(Math.floor(s % 60)).padStart(2, "0")}`;
+  function frame() {
+    let t = now();
+    if (t >= AF.DUR - 0.05 && playing) { pause(); seek(0); t = 0; }
+    AF.render(ctx, t);
+    fill.style.width = (t / AF.DUR * 100) + "%";
+    document.getElementById("time").textContent = `${fmt(t)} / ${fmt(AF.DUR)}`;
+    requestAnimationFrame(frame);
+  }
+  Promise.all([window.FONTS_READY, document.fonts.ready]).then(() => requestAnimationFrame(frame));
+})();
+</script>
+</body>
+</html>

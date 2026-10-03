@@ -1,0 +1,207 @@
+1
+00:00:00,800 --> 00:00:04,600
+Around 300 BC, Euclid wrote down an algorithm.
+
+2
+00:00:05,000 --> 00:00:09,400
+Measure the larger by the smaller, then measure again with what is left.
+
+3
+00:00:09,800 --> 00:00:13,800
+When nothing remains, the greatest common divisor reveals itself.
+
+4
+00:00:14,200 --> 00:00:19,400
+Twenty-three centuries later, it still runs at the heart of modern cryptography.
+
+5
+00:00:30,200 --> 00:00:34,400
+Sorting: turning chaos into order.
+
+6
+00:00:34,600 --> 00:00:39,000
+Quicksort: pick a pivot, smaller to the left, larger to the right.
+
+7
+00:00:39,200 --> 00:00:43,800
+The same hundred numbers: bubble sort takes 7,605 steps, quicksort 1,163.
+
+8
+00:00:44,400 --> 00:00:48,600
+Merge sort: with every pass, the sorted runs double in length.
+
+9
+00:00:49,200 --> 00:00:54,000
+Seven passes later, noise has become a spectrum.
+
+10
+00:00:54,400 --> 00:00:59,400
+Ten billion numbers: minutes for quicksort, millennia for bubble sort.
+
+11
+00:01:02,200 --> 00:01:06,600
+Binary search: every step rules out half.
+
+12
+00:01:07,000 --> 00:01:11,600
+One number in a million, found in twenty steps.
+
+13
+00:01:12,000 --> 00:01:16,600
+Depth-first: push ahead, and at a dead end, turn back.
+
+14
+00:01:17,000 --> 00:01:21,600
+Breadth-first: like water, flowing into every branch at once.
+
+15
+00:01:22,000 --> 00:01:26,600
+The first stream to reach the exit has traced the shortest path.
+
+16
+00:01:32,200 --> 00:01:36,400
+Fourier: any wave can be built from spinning circles.
+
+17
+00:01:36,800 --> 00:01:40,400
+The more circles, the squarer the wave.
+
+18
+00:01:40,800 --> 00:01:45,400
+Three hundred nested circles can write a character.
+
+19
+00:01:45,800 --> 00:01:50,000
+The character is 美: beauty.
+
+20
+00:01:50,400 --> 00:01:54,400
+Sound, images, radio: the world is made of frequencies.
+
+21
+00:01:54,600 --> 00:01:57,800
+The music you are hearing breaks down exactly like this.
+
+22
+00:02:00,200 --> 00:02:04,400
+Each bird follows three rules: separate, align, cohere.
+
+23
+00:02:04,800 --> 00:02:09,400
+No leader, no blueprint, yet a thousand birds move as one.
+
+24
+00:02:09,800 --> 00:02:13,600
+This is emergence: simple rules, complex worlds.
+
+25
+00:02:14,400 --> 00:02:19,600
+In 1952, Turing showed that two reacting, spreading chemicals can grow patterns.
+
+26
+00:02:20,000 --> 00:02:25,400
+Leopard spots, coral, fingerprints. Perhaps life itself is an algorithm.
+
+27
+00:02:28,200 --> 00:02:32,400
+Recursion: a function that calls itself.
+
+28
+00:02:32,800 --> 00:02:35,800
+Twelve calls deep: four thousand and ninety-six branches.
+
+29
+00:02:36,400 --> 00:02:40,400
+The Mandelbrot set: one line, z becomes z² plus c.
+
+30
+00:02:40,800 --> 00:02:45,200
+Iterate every point on the plane and ask: does it escape to infinity?
+
+31
+00:02:45,600 --> 00:02:50,200
+The points that never escape form this black island. Its coastline is infinitely complex.
+
+32
+00:02:50,600 --> 00:02:55,400
+We are magnifying it seven billion times.
+
+33
+00:02:55,800 --> 00:02:59,400
+The deeper we go, the more there is.
+
+34
+00:03:00,600 --> 00:03:03,800
+And at the very bottom, it finds itself again.
+
+35
+00:03:06,200 --> 00:03:10,400
+The traveling salesman: visit every city. What is the shortest route?
+
+36
+00:03:10,800 --> 00:03:15,400
+With 1,500 cities, there are more routes than atoms in the universe.
+
+37
+00:03:15,800 --> 00:03:20,400
+Simulated annealing: like cooling metal, bold at first, then slowly settling.
+
+38
+00:03:20,800 --> 00:03:25,400
+In the end, a single line passes through every star.
+
+39
+00:03:25,800 --> 00:03:31,200
+And what it draws is the very Mandelbrot island we just explored.
+
+40
+00:03:34,200 --> 00:03:38,600
+Gradient descent: follow the steepest slope, step by step, to the valley floor.
+
+41
+00:03:39,000 --> 00:03:43,600
+Almost every AI today learns this way.
+
+42
+00:03:44,200 --> 00:03:48,800
+Neural networks: the rules are no longer written. They are learned from data.
+
+43
+00:03:49,200 --> 00:03:53,600
+Two intertwined spirals. At first, it can only draw a straight line.
+
+44
+00:03:54,000 --> 00:03:58,800
+After 150 rounds of training, it learns to bend.
+
+45
+00:03:59,200 --> 00:04:03,600
+Today, algorithms have learned to write, to paint, to code.
+
+46
+00:04:04,200 --> 00:04:09,600
+Even this film, every frame and every note, was computed.
+
+47
+00:04:10,600 --> 00:04:15,400
+Sorting, searching, transforming, emerging, recursing, optimizing, learning:
+
+48
+00:04:15,800 --> 00:04:20,600
+they hide behind every click, every search, every message.
+
+49
+00:04:21,000 --> 00:04:25,600
+An algorithm is human thought in its most precise form.
+
+50
+00:04:26,000 --> 00:04:31,200
+Cold and rigorous, and astonishingly beautiful.
+
+51
+00:04:34,000 --> 00:04:39,000
+A finite set of steps,
+
+52
+00:04:39,400 --> 00:04:44,600
+leading to infinite possibility.
