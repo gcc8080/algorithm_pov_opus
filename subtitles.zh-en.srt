@@ -1,0 +1,259 @@
+1
+00:00:00,800 --> 00:00:04,600
+公元前三百年，欧几里得写下了一个算法。
+Around 300 BC, Euclid wrote down an algorithm.
+
+2
+00:00:05,000 --> 00:00:09,400
+用小的去量大的；量不尽的余数，再拿来继续量。
+Measure the larger by the smaller, then measure again with what is left.
+
+3
+00:00:09,800 --> 00:00:13,800
+直到余数为零，最大公约数便自己现身。
+When nothing remains, the greatest common divisor reveals itself.
+
+4
+00:00:14,200 --> 00:00:19,400
+两千三百年后，它仍在现代密码学的核心运转。
+Twenty-three centuries later, it still runs at the heart of modern cryptography.
+
+5
+00:00:30,200 --> 00:00:34,400
+排序：把混乱，变成秩序。
+Sorting: turning chaos into order.
+
+6
+00:00:34,600 --> 00:00:39,000
+快速排序：选一个基准，小的放左边，大的放右边。
+Quicksort: pick a pivot, smaller to the left, larger to the right.
+
+7
+00:00:39,200 --> 00:00:43,800
+同样一百个数：冒泡排序要 7,605 步，快速排序只要 1,163 步。
+The same hundred numbers: bubble sort takes 7,605 steps, quicksort 1,163.
+
+8
+00:00:44,400 --> 00:00:48,600
+归并排序：每一轮，有序片段的长度都翻一倍。
+Merge sort: with every pass, the sorted runs double in length.
+
+9
+00:00:49,200 --> 00:00:54,000
+七轮之后，噪声变成了光谱。
+Seven passes later, noise has become a spectrum.
+
+10
+00:00:54,400 --> 00:00:59,400
+一百亿个数：快速排序几分钟，冒泡排序要上千年。
+Ten billion numbers: minutes for quicksort, millennia for bubble sort.
+
+11
+00:01:02,200 --> 00:01:06,600
+二分查找：每一步，排除一半。
+Binary search: every step rules out half.
+
+12
+00:01:07,000 --> 00:01:11,600
+一百万个数里找一个，只需二十步。
+One number in a million, found in twenty steps.
+
+13
+00:01:12,000 --> 00:01:16,600
+深度优先：一路向前，走进死路就回头。
+Depth-first: push ahead, and at a dead end, turn back.
+
+14
+00:01:17,000 --> 00:01:21,600
+广度优先：像水一样，同时涌入每一条岔路。
+Breadth-first: like water, flowing into every branch at once.
+
+15
+00:01:22,000 --> 00:01:26,600
+最先抵达出口的那股水流，走的就是最短路径。
+The first stream to reach the exit has traced the shortest path.
+
+16
+00:01:32,200 --> 00:01:36,400
+傅里叶：任何波形，都能拆成旋转的圆。
+Fourier: any wave can be built from spinning circles.
+
+17
+00:01:36,800 --> 00:01:40,400
+圆越多，方波就越方。
+The more circles, the squarer the wave.
+
+18
+00:01:40,800 --> 00:01:45,400
+三百多个圆层层相套，就能写出一个字。
+Three hundred nested circles can write a character.
+
+19
+00:01:45,800 --> 00:01:50,000
+这个字，是「美」。
+The character is 美: beauty.
+
+20
+00:01:50,400 --> 00:01:54,400
+声音、图像、无线信号——世界由频率组成。
+Sound, images, radio: the world is made of frequencies.
+
+21
+00:01:54,600 --> 00:01:57,800
+你此刻听到的音乐，正是这样被分解的。
+The music you are hearing breaks down exactly like this.
+
+22
+00:02:00,200 --> 00:02:04,400
+每只鸟只遵守三条规则：分离、对齐、聚集。
+Each bird follows three rules: separate, align, cohere.
+
+23
+00:02:04,800 --> 00:02:09,400
+没有领袖，没有蓝图，成千只鸟却像一个整体。
+No leader, no blueprint, yet a thousand birds move as one.
+
+24
+00:02:09,800 --> 00:02:13,600
+这就是涌现：简单的规则，复杂的世界。
+This is emergence: simple rules, complex worlds.
+
+25
+00:02:14,400 --> 00:02:19,600
+1952 年，图灵发现：两种物质的反应与扩散，就能长出斑纹。
+In 1952, Turing showed that two reacting, spreading chemicals can grow patterns.
+
+26
+00:02:20,000 --> 00:02:25,400
+豹纹、珊瑚、指纹……也许生命本身，就是一段算法。
+Leopard spots, coral, fingerprints. Perhaps life itself is an algorithm.
+
+27
+00:02:28,200 --> 00:02:32,400
+递归：一个函数，调用它自己。
+Recursion: a function that calls itself.
+
+28
+00:02:32,800 --> 00:02:35,800
+十二层调用，长出四千零九十六根枝条。
+Twelve calls deep: four thousand and ninety-six branches.
+
+29
+00:02:36,400 --> 00:02:40,400
+曼德博集合：只有一行公式，z 变成 z² 加 c。
+The Mandelbrot set: one line, z becomes z² plus c.
+
+30
+00:02:40,800 --> 00:02:45,200
+对平面上每一个点反复迭代，问它：会逃向无穷吗？
+Iterate every point on the plane and ask: does it escape to infinity?
+
+31
+00:02:45,600 --> 00:02:50,200
+不会逃逸的点，组成这座黑色的岛屿；它的海岸线无限复杂。
+The points that never escape form this black island. Its coastline is infinitely complex.
+
+32
+00:02:50,600 --> 00:02:55,400
+我们正在把它放大七十亿倍。
+We are magnifying it seven billion times.
+
+33
+00:02:55,800 --> 00:02:59,400
+越往深处，越是无穷。
+The deeper we go, the more there is.
+
+34
+00:03:00,600 --> 00:03:03,800
+而在最深处，它又看见了自己。
+And at the very bottom, it finds itself again.
+
+35
+00:03:06,200 --> 00:03:10,400
+旅行商问题：走遍每一座城市，怎样走最短？
+The traveling salesman: visit every city. What is the shortest route?
+
+36
+00:03:10,800 --> 00:03:15,400
+一千五百座城市，可能的路线比宇宙中的原子还多。
+With 1,500 cities, there are more routes than atoms in the universe.
+
+37
+00:03:15,800 --> 00:03:20,400
+模拟退火：像金属冷却，先大胆尝试，再慢慢收敛。
+Simulated annealing: like cooling metal, bold at first, then slowly settling.
+
+38
+00:03:20,800 --> 00:03:25,400
+最后，只剩一条线，经过每一颗星。
+In the end, a single line passes through every star.
+
+39
+00:03:25,800 --> 00:03:31,200
+它画出的，正是刚才那座曼德博岛屿。
+And what it draws is the very Mandelbrot island we just explored.
+
+40
+00:03:34,200 --> 00:03:38,600
+梯度下降：沿着最陡的方向，一步步走向谷底。
+Gradient descent: follow the steepest slope, step by step, to the valley floor.
+
+41
+00:03:39,000 --> 00:03:43,600
+今天几乎所有的人工智能，都是这样学会的。
+Almost every AI today learns this way.
+
+42
+00:03:44,200 --> 00:03:48,800
+神经网络：规则不再由人写下，而是从数据中学会。
+Neural networks: the rules are no longer written. They are learned from data.
+
+43
+00:03:49,200 --> 00:03:53,600
+两条交缠的螺旋。起初，它只会画一条直线。
+Two intertwined spirals. At first, it can only draw a straight line.
+
+44
+00:03:54,000 --> 00:03:58,800
+一百五十轮训练之后，它学会了弯曲。
+After 150 rounds of training, it learns to bend.
+
+45
+00:03:59,200 --> 00:04:03,600
+今天，算法已经学会了写作、绘画、编程……
+Today, algorithms have learned to write, to paint, to code.
+
+46
+00:04:04,200 --> 00:04:09,600
+就连这部影片，每一帧、每一个音符，也都是计算出来的。
+Even this film, every frame and every note, was computed.
+
+47
+00:04:10,600 --> 00:04:15,400
+排序、搜索、变换、涌现、递归、优化、学习——
+Sorting, searching, transforming, emerging, recursing, optimizing, learning:
+
+48
+00:04:15,800 --> 00:04:20,600
+它们藏在每一次点击、每一次搜索、每一条消息背后。
+they hide behind every click, every search, every message.
+
+49
+00:04:21,000 --> 00:04:25,600
+算法，是人类思想最精确的形式。
+An algorithm is human thought in its most precise form.
+
+50
+00:04:26,000 --> 00:04:31,200
+冷静、严密，却美得惊人。
+Cold and rigorous, and astonishingly beautiful.
+
+51
+00:04:34,000 --> 00:04:39,000
+一组有限的步骤，
+A finite set of steps,
+
+52
+00:04:39,400 --> 00:04:44,600
+通往无限的可能。
+leading to infinite possibility.
